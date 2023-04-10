@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: linear-gradient(45deg, #131086, #b621f3);
+    padding: 40px;
+}
+
+.container {
+    min-height: calc(100vh - 40px * 2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: center;
+    background-color: white;
+}
+
+.header{
+    margin-bottom: 40px;
+}
+
+.info-header h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info-basica {
+    display: flex;
+    align-items: center;
+}
+
+.nombre {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    width: 50%;
+}
+
+.fecha {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    width: 50%;
+}
+
+.info-vacunas {
+    width: 100%;
+}
+.info-vacunas1-content {
+    display: flex;
+    align-items: center;
+}
+
+.info-vacunas2-content {
+    display: flex;
+    align-items: center;
+}
+
+.nombreVacuna {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    width: 30%;
+}
+
+.dosisVacuna {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    width: 30%;
+}
+
+.fechaVacunacion {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    width: 30%;
+}
+
+
+/* Responsive */
+
+
+@media (max-width:1536px) {
+
+}
+
+@media (max-width:1200px) {
+
+}
+
+@media (max-width:900px) {
+    body {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        padding: 0;
+    }
+
+    .info-basica {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-vacunas1-content, .info-vacunas2-content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nombreVacuna, .dosisVacuna, .fechaVacunacion, .nombre, .fecha {
+        width: 100%;
+    }
+}

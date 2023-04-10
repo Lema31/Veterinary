@@ -1,0 +1,46 @@
+										Manual de uso
+
+Debido a la imposibilidad de realizar una capacitacion en persona, se decidio crear este manual a modo de documentacion. En este se explicaran las funcionalidades que existen hasta el momento y algunas que estan en desarrollo.
+
+*Al entrar por primera vez al sitio web se presentara una pagina principal con una barra de navegacion en la parte
+superior con distintos hipervinculos que variaran luego de realizar un inicio de sesion, al principio seran
+solamente atajos hacia distintas partes de la misma ventana con plantillas en las que se puede encontrar informacion
+sobre la veterinaria y un formulario de contacto(funcional). El ultimo vinculo es el de inicio de sesion, el cual 
+llevara a la ventana de login.
+
+*Ventana de login: Para entender el funcionamiento de esta, primero se debe explicar que el sistema cuenta con 3 niveles/
+roles de usuario, con el fin de separar el contenido dependiendo de quien ingrese. Estos niveles son "cliente" para los
+propietarios de mascotas, "veterinario" para los medicos veterinarios y "admin" para las personas que deban tener acceso 
+a toda la informacion del sistema y permisos para modificarla de ser necesario, en esta se comprueba que la informacion ingresada sea correcta y devuelve a la pagina principal cambiando partes de la barra de navegacion.
+
+A continuacion se presentan usuarios previamente creados con los que podra probar el funcionamiento del sistema:
+
+	usuario: luis           contraseña: 1234   nivel de acceso: "admin"
+	usuario: luis_cliente	contraseña: 1234   nivel de acceso: "cliente"
+	usuario: luis_vet       contraseña: 1234   nivel de acceso: "veterinario"
+
+Tambien se presenta la posibilidad de que la nueva persona que esta ingresando se cree su propio usuario con el 
+nivel de "cliente" desde la opcion de "registrarse aqui" debajo del boton iniciar.
+
+*Al presionar el vinculo antes mencionado se presenta una ventana de registro de usuario, la cual cuenta con una
+validacion bastante fuerte, para evitar que se ejecute cualquier tipo de codigo malicioso que busque atentar contra la
+integridad de todo el sistema, ademas se comprueba tambien que el nombre de usuario no pertenezca a otra cuenta por medio
+de una consulta a la base da dastos.
+
+*Luego de iniciar sesion se elimina la opcion de iniciar sesion de la barra de navegacion y se agregan 2 nuevas opciones:
+	
+	Primera opcion agregada: "Cerrar sesion", en esta como lo indica su nombre se cierra la sesion que tenga el usuario abierta en ese momento, devolviendo a la barra de navegacion a su estado original.
+
+	Segunda opcion agregada: "Perfil", esta es la opcion que tiene un desarrollo mas extenso debido a que mostrara una ventana diferente dependiendo del nivel de acceso del usuario que ingrese.
+
+		Para un propietario(todavia en desarrollo): Por ahora solo se presenta una plantilla de como se mostrara la informacion de este y las mascotas que posee registradas con opciones para ver los datos de sus ultimas consultas y su carta de vacunacion completa con la opcion de descargarla.
+
+		Para un veterinario(en desarrollo): Todavia no se muestra debido a que todavia se plantea como sera su version final visualmente hablando, pero contendra la informacion del veterinario y podra buscar a las mascotas por medio de su propietario.
+
+		Para un administrador(sigue en desarrollo, pero es la mas avanzada de todas): Esta contendra los datos del administrador con la sesion activa y todos los cruds de las tablas maestras y algunas otras, hasta el momento se muestran los datos que estan en todas las tablas(excepto veterinarios, mascotas, propietarios y medicinas) y el unico crud funcional hasta el momento es el de los administradores, aunque el boton de "modificar" aun se encuentra en revision debido a que no se alcanzado el funcionamiento correcto de este.
+
+Notas:
+
+*Para el funcionamiento del sistema es necesario importar la base de datos la cual esta incluida en una carpeta con el mismo nombre.
+
+*Ademas, debido a que no se han descargado todas las librerias utilizadas es necesario para el correcto desempeño de algunas funcionalidades la presencia de una conexion a internet(especificamente jquery)

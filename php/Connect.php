@@ -1,8 +1,8 @@
 <?php
 	
 $link = 'mysql:host=localhost;dbname=db_veterinaria_sivemar';
-$user = 'lema';
-$pass = 'Lema#3131#2021$';
+$user = 'root';
+$pass = '';
 
 try {
     $pdo = new PDO($link, $user, $pass);
